@@ -1,0 +1,192 @@
+﻿@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+body {
+    background: #11998e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #38ef7d, #11998e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #004c4c, #004c4c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+canvas {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: var(--border-width);
+    border: 5px solid black;
+}
+
+#wrapper {
+    width: auto;
+    height: auto;
+}
+
+#scoreDisplay {
+    padding: 5px 0 5px 10px;
+    font-size: 1.5em;
+    background-color: #004c4c;
+    border-radius: var(--border-width);
+    margin: 0;
+}
+
+#scoreContainer {
+    width: 170px;
+}
+
+#copyright {
+    margin-left: 10px;
+}
+/*start of hr*/
+hr {
+    height: 30px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+    hr:before {
+        display: block;
+        content: "";
+        height: 30px;
+        margin-top: -31px;
+        margin-left: 5px;
+        border-style: solid;
+        border-color: #8c8b8b;
+        border-width: 0 0 1px 0;
+        border-radius: 20px;
+    }
+
+/*End of hr*/
+/*start of button css*/
+.button {
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #004c4c;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 18px;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+    .button:hover {
+        background-color: #f1c40f;
+        color: black;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+    }
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.3s;
+        }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+    .button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+/*End of button*/
+
+.gradient-border {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    --borderWidth: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 910px;
+    font-family: Lato, sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: white;
+    background: #222;
+    border-radius: var(--borderWidth);
+}
+
+    .gradient-border::after {
+        content: '';
+        position: absolute;
+        top: calc(-1 * var(--borderWidth));
+        left: calc(-1 * var(--borderWidth));
+        height: calc(100% + var(--borderWidth) * 2);
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        border-radius: calc(2 * var(--borderWidth));
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+    }
+
+.box-outer {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    --borderWidth: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    font-size: 0.6rem;
+    width: 900px;
+    height: 100px;
+    color: white;
+    background: #222;
+    border-radius: var(--borderWidth);
+}
+
+    .box-outer::after {
+        content: '';
+        position: absolute;
+        top: calc(-1 * var(--borderWidth));
+        left: calc(-1 * var(--borderWidth));
+        height: calc(100% + var(--borderWidth) * 2);
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        border-radius: calc(2 * var(--borderWidth));
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+    }
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.box {
+    padding: 20px;
+}
